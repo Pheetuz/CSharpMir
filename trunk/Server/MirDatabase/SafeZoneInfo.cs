@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Server.MirEnvir;
 
 namespace Server.MirDatabase
 {
@@ -26,6 +27,7 @@ namespace Server.MirDatabase
             Location = new Point(reader.ReadInt32(), reader.ReadInt32());
             Size = reader.ReadUInt16();
             StartPoint = reader.ReadBoolean();
+            if (Envir.LoadVersion >= 10) reader.ReadUInt16();
         }
 
         public void Save(BinaryWriter writer)

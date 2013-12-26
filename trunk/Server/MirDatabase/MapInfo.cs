@@ -31,8 +31,8 @@ namespace Server.MirDatabase
             Title = reader.ReadString();
             MiniMap = reader.ReadUInt16();
             Light = (LightSetting) reader.ReadByte();
-
             if (Envir.LoadVersion >= 3) BigMap = reader.ReadUInt16();
+            if (Envir.LoadVersion >= 10) reader.ReadByte(); 
 
             int count = reader.ReadInt32();
             for (int i = 0; i < count; i++)
