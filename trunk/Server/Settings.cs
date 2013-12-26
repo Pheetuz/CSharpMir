@@ -18,7 +18,7 @@ namespace Server
 
 
         //General
-        public static string VersionPath = @".\Mir2.Exe";
+        public static string VersionPath = @".\Client.Exe";
         public static bool CheckVersion = true;
         public static byte[] VersionHash;
 
